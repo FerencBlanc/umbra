@@ -1,0 +1,21 @@
+# Виртуальное окружение
+venv/
+env/
+.venv/
+
+# Python кэш
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# База данных
+db.sqlite3
+
+# PyCharm
+.idea/
+*.iml
+
+# Django
+*.log
+.DS_Store
