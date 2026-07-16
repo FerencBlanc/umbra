@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Level,Myth
 
-# Register your models here.
+@admin.register(Level)
+class LevelAdmin(admin.ModelAdmin):
+    list_display = ('title', 'depth_score')
+
+@admin.register(Myth)
+class MythAdmin(admin.ModelAdmin):
+    list_display = ('name', 'level')
