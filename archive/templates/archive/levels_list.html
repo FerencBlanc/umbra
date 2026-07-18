@@ -5,6 +5,11 @@
     <title>Levels</title>
 </head>
 <body>
-
+    <h1>Нисхождение в безумие</h1>
+    {% for level in levels %}
+        <p>{{level.title}} (Глубина: {{level.depth_score}})</p>
+    {% endfor %}
+    <br>
+    <a href="/">Вернуться на главную</a>
 </body>
 </html>

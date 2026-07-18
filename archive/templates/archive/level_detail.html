@@ -2,9 +2,23 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{level.title}}</title>
 </head>
 <body>
-
+    <h1>{{level.title}}</h1>
+    <p>{{level.description}}</p>
+    <p><i>Глубина: {{level.depth_score}}</i></p>
+    <h2>Обитатели этого уровня:</h2>
+    {% if myths %}
+        {% for myth in myths %}
+            <p><b>{{myth.name}}</b></p>
+            <p>{{myth.story}}</p>
+            <hr>
+        {% endfor %}
+    {% else %}
+    <p>Здесь пока тихо... Существа ещё не изучены...</p>
+    {% endif %}
+    <br>
+    <a href="/levels">Вернуться к уровням</a>
 </body>
 </html>
